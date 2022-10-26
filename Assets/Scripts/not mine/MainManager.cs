@@ -66,6 +66,9 @@ public class MainManager : MonoBehaviour
     {
         m_Points += point;
         ScoreText.text = $"Score : {m_Points}";
+
+        //aggiorna i punti nella persistenza
+        Persistence.Instance.score = m_Points;
     }
 
     public void GameOver()
