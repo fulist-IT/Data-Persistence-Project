@@ -671,6 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameToSave: {fileID: 1975415005}
+  menuRecordText: {fileID: 1932029208}
 --- !u!1 &580193857
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +835,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4662619982d98904ca988f881c0b0168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameOfPlayerRecord: 
   nameOfPlayer: 
+  scoreMax: 0
   score: 0
 --- !u!4 &763885261
 Transform:

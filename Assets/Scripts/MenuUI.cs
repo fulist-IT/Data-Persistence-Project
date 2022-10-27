@@ -11,10 +11,19 @@ public class MenuUI : MonoBehaviour
 {
     public TextMeshProUGUI nameToSave;
 
+    public TextMeshProUGUI menuRecordText;
+
+    //private void Awake()
+    //{
+        
+    //}
+
 
     //Update necessario per aggiornare il nome del giocatore digitato nella casella di input durante il runtime
     private void Update()
-    {
+    {    
+        menuRecordText.text = $"Record:  {Persistence.Instance.nameOfPlayerRecord}: {Persistence.Instance.scoreMax}";
+
         DigitedNamePlayer();
     }
 

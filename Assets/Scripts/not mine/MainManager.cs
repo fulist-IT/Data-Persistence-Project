@@ -10,6 +10,8 @@ public class MainManager : MonoBehaviour
     public int LineCount = 6;
     public Rigidbody Ball;
 
+    public Text recordText;
+
     public Text ScoreText;
     public GameObject GameOverText;
     
@@ -22,6 +24,8 @@ public class MainManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        recordText.text = $"{Persistence.Instance.nameOfPlayerRecord}: {Persistence.Instance.scoreMax}";
+
         const float step = 0.6f;
         int perLine = Mathf.FloorToInt(4.0f / step);
         
@@ -58,6 +62,9 @@ public class MainManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+                //salvo i dati per la prossima sessione
+                Persistence.Instance.SaveBestPlayerScore();
             }
         }
     }
